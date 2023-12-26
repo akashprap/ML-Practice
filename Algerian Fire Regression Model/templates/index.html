@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form for prediction</title>
+</head>
+
+<body>
+    <h1> FWI Prediction </h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" name="temperature" required><br><br>
+        <label for="rh">RH:</label>
+        <input type="text" id="rh" name="rh" required><br><br>
+        <label for="ws">Ws:</label>
+        <input type="text" id="ws" name="ws" required><br><br>
+        <label for="rain">Rain:</label>
+        <input type="text" id="rain" name="rain" required><br><br>
+        <label for="ffmc">FFMC:</label>
+        <input type="text" id="ffmc" name="ffmc" required><br><br>
+        <label for="dmc">DMC:</label>
+        <input type="text" id="dmc" name="dmc" required><br><br>
+        <label for="isi">ISI:</label>
+        <input type="text" id="isi" name="isi" required><br><br>
+        <label for="classes">Classes:</label>
+        <input type="text" id="classes" name="classes" required><br><br>
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" required><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large"> Predict </button>
+    </form>
+
+    <h2>
+        The FWI Prediction is {{result}}
+    </h2>
+</body>
+
+</html>
